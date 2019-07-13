@@ -1,32 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-
-  <style>
-    .aaa {
-      width: 40px;
-      height: 40px;
-      background-color: tan;
-    }
-  </style>
 </head>
 <body>
-  <input type="number">
+  
+  <!--一级标题注释-->
+  <h1>head1一级标题</h1>
+  <hr/>
+  <p>段落<br/>拆行</p>
+  <h1>head1段落</h1>
+  <p>duanluo<b>bold</b>duanluo2<br/><i>italic</i></p>
+  <p>duanluo<strong>strong</strong>duanluo2<br/><em>italic</em></p>
+  
+  <h1>head1 上下标字</h1>
+  正常字<sub>下标字</sub>
+  正常字<sup>上标字</sup>
+  <br/>
+  正常字<big>放大字</big>
+  正常字<small>小号字</small>
+  <br/>
+  正常字<ins>insert字</ins>
+  正常字<del>delete字</del>
+  
+  <h1>head1</h1>
+  <!--链接-->
+  <a href="www.baidu.com">这个是百度的链接</a><br/>
+  
+  <a href="#tips">跳转到提示</a><hr/>
 
-  <datalist id="cars">
-      <option value="BMW">
-      <option value="Ford">
-      <option value="Volvo">
-  </datalist>
+  <!--图像-->
+  <img src="/aPic.png" alt="随便截的一个输入法的图" width="139" height="106"><br/>
+  <img src="./aPic.png" alt="随便截的一个输入法的图" width="139" height="106"> 
 
-  <div class="aaa"></div>
+  <hr/>
+  <!--无序列表-->
+  <ul>
+    <li>麦当劳</li>
+    <li>肯德基</li>
+  </ul>
+  <hr/>
+  <!--有序列表-->
+  <ol>
+    <li>买菜</li>
+    <li>洗菜</li>
+    <li>切菜</li>
+    <li>炒菜</li>
+  </ol>
+  <!--自定义列表，以dd结束-->
+  <p>列表项和列表项定义有啥不一样？</p>
+  <dl>
+    <dt>这是一个<span style="color: red">列表项</span>(怎么把“列表项”这三个字改成红色？)</dt>
+    <dd>这是一个列表项定义，列表项定义好像有自动缩进？</dd>
+  </dl>
+  <hr/>
+  <span>span是干啥的，内联元素？干啥的？</span>
 
-  <p class="color-red">pppp</p>
 
 
+  
+  <h1>div的演示</h1>
+  <p style="color: brown">高度、宽度要加px吗？</p><br/>
+
+  <div id="mydiv1" style="background-color:#FFA500;height:200px;width:400px;float:right;">
+    div中的style有先后顺序吗？style中的设置是用冒号“:”，不是“=”
+  </div>
+  <div id="content" style="background-color:burlywood;height:200px;width:400px;float:left;text-align:center;">
+    内容在这里
+  </div>
+  <div id="divTryAgain" style="background-color:cornflowerblue;height:200px;width:400px;float:right;">
+    这里的版面怎么乱七八糟？
+  </div><br/>
+  <div id="topDiv" style="background-color: darkred">
+    <h1>
+      这个跟下面的为啥还隔了一块空的
+    </h1>
+  </div>
+  <div id="leftDiv" style="background-color: darksalmon;height:500px;width:30%;float:left;">
+    左边导航栏,style里面的都要以分号结尾吗？
+  </div>
+  <div id="rightDiv" style="background-color: goldenrod;height:500px;width:70%;float:right;">
+    右边的主要内容,如果不设置百分比，怎么把屏幕填满
+  </div>
+  <div id="buttonDiv" style="background-color: green;color: honeydew">
+    下面的其他信息,没有设置为最下面的位置吗？
+  </div>
+  <h1>下面是表单</h1>
+  <form action="submit">
+    username: <input type="text" name="username" id="username" value="默认显示的值"><br/>
+    password: <input type="password" name="password" id="password"><br/>
+    sex:<br/>
+    <input type="radio" name="sex" value="male"><br/>
+    <input type="radio" name="sex" value="female"><br/>
+    hobby:<br/>
+    <input type="checkbox" name="hobby" value="swimming"><br/>
+    <input type="checkbox" name="hobby" value="cooking"><br/>
+    <input type="checkbox" name="hobby" value="running"><br/>
+
+    <input type="submit" value="提交"><br/>
+    <button>submit!这个button和input的submit好像没有区别</button>
+  </form>
+  选择今晚吃什么：
+  <select name="chooseDinner" id="dinner">
+    <option value="null">选择今晚晚餐</option>
+    <option value="pizza">披萨</option>
+    <option value="hotpot">火锅</option>
+    <option value="fish">酸菜鱼</option>
+    <option value="sushi">寿司</option>
+  </select>
+
+<p id="tips">一个提示tips</p>
+<nav>导航是什么？里面有很多链接？
+  <a href="http://baidu.com">html，前后都要斜杠吗？</a>|
+  <a href="http://youku.com">css</a>|
+  <a href="http://taobao.com">JavaScript</a>
+</nav>
+<hr/>
+<br><hr/>
+<h1>section</h1>
+<section>文档区域，跟div有啥不一样？
+  <h3>文档中的题目</h3>
+  <p>文档中的内容，吧啦吧啦吧啦吧啦</p>
+</section><hr/>
+<h1>footer</h1>
+<footer>页脚，有啥用？
+  <p>Posted by: Hege Refsnes</p>
+  <p><time pubdate datetime="2012-03-01">p里面还能有时间？这个时间能干嘛？</time></p>
+</footer>
+<hr>
+<h1>script</h1>
+<script>
+    document.write("里面是是JavaScript代码？")
+    document.write("Hello World!")
+</script>
 </body>
 </html>
