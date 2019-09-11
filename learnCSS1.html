@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS学习2</title>
+        <style>
+            body{
+                background-color: rgb(216, 213, 213);
+            }
+            h1{
+                background-color: deeppink;
+                color:floralwhite;
+                text-align: center;
+            }
+            h3.choose{
+                background-color: aqua;
+            }
+            /*p和b用同样的颜色，使用分组选择器实现*/
+            p,b{
+                color: rgb(255, 100, 80);
+            }
+            .one{
+                background-color: blueviolet;
+                color: aliceblue;
+            }
+            h5.two{
+                background-color: blueviolet;
+                color: aliceblue;
+            }
+            .aDiv p{
+                background-color: cadetblue;
+                color:chartreuse;
+            }
+            p#hidden{
+                visibility: hidden;/*隐藏了，但还是会占用位置*/
+            }
+            p#display{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>选择器</h1>
+        <h3 class="choose">分组选择器</h3>
+        <p>随便打一段字</p>
+        <b>随便打一段字</b><!--使用分组选择器，将两个的颜色一起设置-->
+        <h3 class="choose">嵌套选择器</h3>
+        <p>
+            演示：<br>
+            p,.class,p.class,.class p
+        </p>
+        <h4>1、p：如h1的样式：</h4>
+        <h4>2、.class：class相同的统一设置颜色，元素类型不一致，只要class一样，就可以一起设置，如下面两个，都是紫底白字</h4>
+        <h5 class="one">h5:这个是.class的演示</h5>
+        <h6 class="one">h6:这个是.class的演示</h6>
+        <h4>3、p.class，需要是同一种元素，相同的class，比如h5.class时，虽然下面两个的class相同，但是只有h5的颜色被设置为紫底白字</h4>
+        <h5 class="two">h5:这个是p.class的演示</h5>
+        <h6 class="two">h6:这个是p.class的演示</h6>
+        <h4>4、.class p：class中的p元素才会被设置</h4>
+        <div class="aDiv">
+            <p>h5:这个是.class p的演示</p>
+        </div>
+
+        <h1>两种隐藏元素</h1>
+        <h2>使用visibility: hidden，还是会占用位置，只是不会显示</h2>
+        <p id="hidden">这个是隐藏元素</p>
+        <p>上面有一个隐藏元素</p>
+        <h2>使用display：none，啥都不会有了，位置也没有了</h2>
+        <p id="display">这个是隐藏元素</p>
+        <p>上面有一个隐藏元素，位置都没有了</p>
+
+        <h1>定位</h1>
+        <ol>定位：
+            <li>static：默认</li>
+            <li>fixed：固定位置</li>
+            <li>relative：相对位置</li>
+        </ol>
+        <h2>相对位置：</h2>
+        <p id="positionNormal">这个是正常位置</p>
+        <p id="positionLeftMi">这个是相对正常位置的左边-20px位置</p>
+        <p id="positionLeftpl">这个是相对正常位置的左边+20px位置</p>
+    </body>
+</html> 

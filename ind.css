@@ -1,0 +1,8 @@
+h1
+{
+    color:rgb(237, 241, 237);
+}
+body{
+    background-image:url('backgroundImage.png');
+    background-repeat: repeat-x;
+}

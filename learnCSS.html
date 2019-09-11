@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS学习1</title>
+        <link rel="stylesheet" type="text/css" href="ind.css">
+        /*在head里面的这个东西也不是注释*/
+        <style>
+            /*在style里面的才是注释*/
+            /*h1这个是选择器*/
+            h1
+            {
+                /*属性：值*/
+                /* color:darkblue;   */
+                /* 如果把上面选择颜色这行注释掉，就会显示css中的样式；不注释就会显示选择器中设置的样式 */
+                text-align: center;
+                background-color:darkorange;
+            }
+            /*id选择器，用"#"号*/
+            h1#firstHead
+            {
+                color: black
+            }
+            /*class选择器，用"."*/
+            p.alertParagraph
+            {
+                color:rgb(238, 14, 14);
+                background-color: yellow;
+            }
+            p.date{
+                text-align: right;
+            }
+            p.main{
+                text-align: justify;
+                text-indent: 35px;
+            }
+            ol#firstOl{
+                /*list-style-type:circle;有序变无序*/
+                list-style-type:  upper-roman;
+            }
+            ol#secondOl{
+                /*list-style-type:  upper-latin; 怎么也是ABC*/
+                list-style-type:  upper-alpha; /*ABC*/
+            }
+            ul#firstUl{list-style-type:square;}
+            ul#picUl{list-style-image: url('heart.png');}
+            a#find:link{
+                color: rgb(0, 255, 21);
+            }
+            a#find:visited{
+                text-decoration: none; 
+            }
+            a#find:hover{
+                color: rgb(255, 174, 0);
+            }
+            a#find:active{
+                color:crimson;
+            }
+            table{
+                border:1px solid black;
+            }
+            th{
+                /*设置th（标题），td（段落）就可以了，tr不用设置*/
+                border:1px solid black;
+                background-color: black;
+                color: white;
+                height: 50px;
+                width: 200px;
+            }
+            td{
+                border:1px solid black;
+                vertical-align: bottom;/*单元格内上下的位置*/
+                text-align:center;/*单元格内左右的位置*/
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Head有两个默认属性</h1>
+        <p>1、在ind.css中设置了绿色</p>
+        <p style="color: brown">2、在style中设置了蓝色</p>
+
+        <h1 id='firstHead'>选择器的类型</h1>
+        <p>有个问题：选选择器一定要x.class，或x#id吗？不加那个x好像也行啊</p>
+        <p class="alertParagraph">警告111111</p>
+        <p class="alertParagraph">警告222222</p>
+
+        <h1>下面是一大段文字，看看文字的排版</h1>
+        <p class="date">2019年7月27日 下午</p>
+        <p class="main">由第一章至第四章是第一个单元，写方鸿渐在上海和家乡（江南某县）的生活情景，以写上海为主。在这个单元中，方鸿渐和苏文纨的“爱情”纠葛占了重要的分量。苏文纨的倾心相与和方鸿渐的另有所欢，使他们演出了不少半真半假、女真男假的滑稽戏。暴露了苏文纨官宦小姐矜持自负、自作多情、因而落得空对镜花水月的尴尬相，也暴露了方鸿渐纨绔子弟优柔寡断、不更世事而又玩世不恭的浮华相。围绕着他们，作者还写了十里洋场社交生活的各种人物，在美国人花旗洋行里做买办、喜欢人们唤他Jimmy的张吉民，外表时髦、骨子里守旧的董斜川，“对雌雄性别，最有研究”的青年哲学家褚慎明，满肚子不老实、自我标榜是“新古典主义”的诗人曹元朗，以及暗中把方鸿渐当做情敌、枉费了心思的赵辛楣，甚至还有生得漂亮、头脑乖巧的唐晓芙等等，他们都在作者笔下显示了各自的性格和色相。他们宴饮会客、谈诗论文以及各种应酬交际是那样的内心空虚、百无聊赖以及庸俗不堪，这种生活不会培植健康的爱情，更不会培植健康的理想，本身就是一个有待冲破的“围城”。</p>
+        <p><b>注意：</b>没有什么注意的</p>
+
+        <h1>字体大小</h1>
+        <p>em，百分比，px作用有啥不一样</p>
+
+        <h1>列表的样式</h1>
+        <h2>有序列表</h2>
+        <ol id="firstOl">有序排列展示
+            <li>第一个</li>
+            <li>第二个</li>
+            <li>第三个</li>
+        </ol>
+        <ol id="secondOl">有序排列展示
+            <li>第一个</li>
+            <li>第二个</li>
+            <li>第三个</li>
+        </ol>
+        <h2>无序列表</h2>
+        <ul id="firstUl">无序排列展示
+            <li>衣服</li>
+            <li>裤子</li>
+            <li>毛巾</li>
+        </ul>
+        <h2>用图片做序号</h2>
+        <ul id="picUl">图片做序号的列表
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+
+        <h1>链接</h1>
+        <a id="find" href="http://www.baidu.com.cn" target="_blank">百度一下</a>
+
+        <h1>表格</h1>
+        <table id="Atable">
+            <tr><th>firstName</th><th>lastName</th></tr><!--th里面是head，即表头-->
+            <tr><td>John</td><td>Wasonton</td></tr><!--td里面是每行中的内容-->
+            <tr><td>Dingling</td><td>Wen</td></tr>
+        </table>
+
+    </body>
+</html>
